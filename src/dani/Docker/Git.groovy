@@ -16,9 +16,9 @@ class Git implements Serializable {
             pack.sh 'git push origin HEAD:main'
         }
     }
-    def Config() {
-        pack.sh 'git config --global user.email "dancool11@gmail.com"'
-        pack.sh 'git config --global user.name "jenkins"'
+    def Config(String Name, String Mail) {
+        pack.sh "git config --global user.email \"$Mail\""
+        pack.sh "git config --global user.name \"$Name\""
         pack.sh 'git config --list'
     }
 
