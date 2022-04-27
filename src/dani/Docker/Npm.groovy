@@ -25,10 +25,10 @@ class Npm implements Serializable {
         }
     }
         def update() {
-            dir("app") {
-                sh "npm version ${params.Version}"
-                env.VERSION2 = sh(script: "npm pkg get version", returnStdout: true)
-                env.VERSION2 = sh(script: "echo \"${env.VERSION2}\" | sed 's/\"//g' | tr -d '\n'", returnStdout: true)
+            pack.dir("app") {
+                pack.sh "npm version ${pack.params.Version}"
+                pack.env.VERSION2 = pack.sh(script: "npm pkg get version", returnStdout: true)
+                pack.env.VERSION2 = pack.sh(script: "echo \"${pack.env.VERSION2}\" | sed 's/\"//g' | tr -d '\n'", returnStdout: true)
             }
         }
-}
+    }
