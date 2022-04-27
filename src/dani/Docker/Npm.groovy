@@ -23,6 +23,7 @@ class Npm implements Serializable {
             pack.sh "rm -f bootcamp-node-project*"
             pack.sh "npm pack"
         }
+    }
         def update() {
             dir("app") {
                 sh "npm version ${params.Version}"
@@ -30,6 +31,4 @@ class Npm implements Serializable {
                 env.VERSION2 = sh(script: "echo \"${env.VERSION2}\" | sed 's/\"//g' | tr -d '\n'", returnStdout: true)
             }
         }
-    }
-
 }
