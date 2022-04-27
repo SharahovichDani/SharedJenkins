@@ -15,9 +15,13 @@ class Docker implements Serializable {
         }
     }
     def BuildDocker(string ImageName) {
-        pack.sh "docker build -t $ImageName ."
+        pack.dir("app") {
+            pack.sh "docker build -t $ImageName ."
+        }
     }
     def PushDocker(string ImageName) {
-        pack.sh "docker push $ImageName"
+        pack.dir("app") {
+            pack.sh "docker push $ImageName"
+        }
     }
 }
