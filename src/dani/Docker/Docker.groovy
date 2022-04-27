@@ -14,12 +14,12 @@ class Docker implements Serializable {
             pack.sh "echo $pack.PASS | docker login -u $pack.USER --password-stdin"
         }
     }
-    def BuildDocker(string ImageName) {
+    def BuildDocker(String ImageName) {
         pack.dir("app") {
             pack.sh "docker build -t $ImageName ."
         }
     }
-    def PushDocker(string ImageName) {
+    def PushDocker(String ImageName) {
         pack.dir("app") {
             pack.sh "docker push $ImageName"
         }
