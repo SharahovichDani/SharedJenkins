@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
-import dani.docker.Git
+import dani.Docker.Git
 
 def call(){
-    return new Git(this).Config()
+    return new Git(this).Push()
 }
