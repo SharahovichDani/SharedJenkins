@@ -2,6 +2,6 @@
 
 import dani.Docker.Docker
 
-def call(){
-    return new Docker(this).PushDocker()
+def call(string ImageName){
+    return new Docker(this).PushDocker(string ImageName)
 }
