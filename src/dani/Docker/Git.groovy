@@ -13,12 +13,12 @@ class Git implements Serializable {
             pack.sh '''git remote set-url origin https://'''+pack.PASS+'''@github.com/SharahovichDani/test.git'''
             pack.sh 'git add .'
             pack.sh 'git commit -m "[ci skip]"'
-            pack.sh 'git push -u origin main'
+            pack.sh 'git push -u origin master'
         }
     }
     def Config(String Name, String Mail) {
-        pack.sh "git config --global user.email \"$Mail\""
-        pack.sh "git config --global user.name \"$Name\""
+        pack.sh '''git config --global user.email '''+Mail+''''''
+        pack.sh '''git config --global user.name '''+Name+''''''
         pack.sh 'git config --list'
     }
 
