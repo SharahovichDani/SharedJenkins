@@ -2,6 +2,6 @@
 
 import dani.Docker.Git
 
-def call(String Name, String Mail){
-    return new Git(this).Config(Name, Mail)
+def call(String Mail){
+    return new Git(this).Config(Mail)
 }
