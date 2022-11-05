@@ -19,7 +19,6 @@ class Git implements Serializable {
     def Config(String Mail) {
         pack.sh "echo $Mail"
         pack.sh '''git config --global user.email '''+Mail+''''''
-        pack.sh '''git config --global user.name '''+Name+''''''
         pack.sh 'git config --list'
     }
 
