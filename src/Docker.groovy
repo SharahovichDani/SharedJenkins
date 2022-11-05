@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-package dani.Docker
+package src
 
 class Docker implements Serializable {
 

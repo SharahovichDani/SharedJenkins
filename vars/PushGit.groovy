@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-import dani.Docker.Git
+import src.Git
 
 def call(String url){
     return new Git(this).Push(url)

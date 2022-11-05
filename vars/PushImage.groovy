@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-import dani.Docker.Docker
+import src.Docker
 
 def call(String ImageName){
     return new Docker(this).PushDocker(ImageName)

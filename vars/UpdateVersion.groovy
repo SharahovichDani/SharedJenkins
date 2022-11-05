@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-import dani.Docker.Npm
+import src.Npm
 
 def call(){
     return new Npm(this).update()

@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-import dani.Docker.Npm
+import srcc.Npm
 
 def call(){
     return new Npm(this).UpdateVersion()
