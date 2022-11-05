@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-package src.classes
+package src.dani.Docker
 
 class Git implements Serializable {
     def pack

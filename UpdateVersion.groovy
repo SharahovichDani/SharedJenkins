@@ -3,5 +3,5 @@
 import src.dani.Docker.Npm
 
 def call(){
-    return new Npm(this).update()
+    return new Npm(this).UpdateVersion()
 }
