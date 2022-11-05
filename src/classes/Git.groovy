@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-package src
+package src.classes
 
 class Git implements Serializable {
     def pack

@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-import src.Npm
+import src.classes.Npm
 
 def call(){
     return new Npm(this).install()
