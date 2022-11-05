@@ -8,9 +8,9 @@ class Git implements Serializable {
     Git(pack) {
         this.pack = pack
     }
-    def Push() {
+    def Push(String url) {
         pack.withCredentials([pack.string(credentialsId: "GitHub-Credentials2", variable: 'PASS')]) {
-            pack.sh '''git remote set-url origin https://'''+pack.PASS+'''@'''+env.URL+''''''
+            pack.sh '''git remote set-url origin https://'''+pack.PASS+'''@'''+url+''''''
             pack.sh 'git add .'
             pack.sh 'git commit -m "[ci skip]"'
             pack.sh 'git push origin HEAD:main'
