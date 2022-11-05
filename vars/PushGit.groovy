@@ -2,6 +2,6 @@
 
 import dani.Docker.Git
 
-def call(){
-    return new Git(this).Push()
+def call(String url){
+    return new Git(this).Push(url)
 }
