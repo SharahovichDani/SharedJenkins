@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-package src.dani.Docker
+package modules
 
 class Npm implements Serializable {
     def pack
