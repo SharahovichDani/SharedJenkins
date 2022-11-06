@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-import src.modules.Git
+import modules.Git
 
 def call(String url){
     return new Git(this).Push(url)
